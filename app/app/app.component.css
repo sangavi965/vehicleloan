@@ -1,0 +1,10 @@
+.navigation{
+    overflow: hidden;
+    width: 100%;
+    font-size: small;
+    background-color:rgb(114, 12, 77);
+    font-family: Verdana, sans-serif;
+    color: rgb(226, 225, 225);
+    text-align: center;
+    
+}
