@@ -1,0 +1,68 @@
+        
+    <div class="form-style-10">
+    <h1>Apply Loan<span>..We are here to support you..</span></h1>
+    <form #loanForm="ngForm" (ngSubmit)="saveData()">
+     
+        <div class="section"><span>1</span>Employment Details</div>
+        <div class="inner-wrap">
+          
+            <label>Type Of Employment 
+
+                <select name="employment" id="employement" [(ngModel)]="elig.employementtype" required>
+                    <option value="default"></option>
+                    <option value="self">self-employed</option>
+                    <option value="Government">employee</option>
+                    <option value="private">worker</option>
+                </select>
+            </label>
+          
+            <label>Anual Salary <input type="text" name="field2" [(ngModel)]="elig.annualsalary" ></label>
+            <label>Existing Emi
+               
+              <select name="field2" checked [(ngModel)]="elig.existingemi" >
+                <option value="default"></option>
+                <option value="emi">Yes</option>
+                <option value="emi">No</option>
+              </select>
+              </label>
+          </div>
+       
+        <div class="section"><span>2</span>Vehicle Details</div>
+        <div class="inner-wrap">
+            <label>Car Make 
+                <select name="cars" id="cars"   [(ngModel)]="vehicle.carmake" required>
+                    <option value="default"></option>
+                    <option value="Maruthi">Maruthi</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Audi">Audi</option>
+                </select>
+            </label>
+            <label>Car Model 
+                <select name="cars" id="cars" [(ngModel)]="vehicle.vehicletype" required>
+                    <option value="default"></option>
+                    <option value="Brezza">Brezza</option>
+                    <option value="Ertiga">Ertiga</option>
+                    <option value="City">City</option>
+                    <option value="Amaze">Amaze</option>
+                    <option value="Harrier">Harrier</option>
+                    <option value="Nexon">Nexon</option>
+                    <option value="Q2">Q2</option>
+                    <option value="RS5">RS5</option>
+                </select>
+            </label>
+            <label>Ex-Showroom Price <textarea name="field2" [(ngModel)]="vehicle.exshowroomprice" required></textarea></label>
+        </div>
+    
+        <div class="button-section">
+          <input type="submit" name="Sign Up" [disabled]="!loanForm.valid" />
+         </div>
+        
+    </form>
+    </div>
+       
+    
+    
+
+
+    
